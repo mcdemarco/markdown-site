@@ -2,6 +2,8 @@
 
 *This branch adds some customization to the template file.  I don't do YAML crap in my markdown files, but I wanted to reproduce the style of [SCMS](https://github.com/mcdemarco/scms).*
 
+*I also wanted to serve some files without extensions because they'd been linked that way in SCMS.  MultiViews should handle that, but didn't quite.  I also needed to turn on the mime type in the list in `/etc/apache/mime.types`.  The remaining, perhaps excessive, changes are included in this branch's `.htaccess` file.*
+
 ----
 
 This is just a little hack I stumbled across to throw together a blindly simple set of nicely formatted HTML pages on a server quickly and easily.
