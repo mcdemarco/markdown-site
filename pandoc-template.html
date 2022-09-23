@@ -14,6 +14,7 @@ $endif$
 
     <title>$if(site-title)$$site-title$ - $endif$$pagetitle$</title>
 
+<link rel="stylesheet" href="/main.css" />
 $for(css)$
     <link rel="stylesheet" href="$css$" />
 $endfor$
@@ -35,26 +36,18 @@ $if(site-title)$
     </header>
 $endif$
 
+		<main id="content">
+
 $if(toc)$
-<div class="container">
-    <nav class="$toc-class$">
-        $toc$
-    </nav>
-<div>
+			<div id="toc">
+				<div id="toctitle">Contents</div>
+				<div id="scms-toc">
+					$toc$
+				</div>
+			</div>
 $endif$
 
-<div class="container">
-    $if(title)$
-        <h1 class="$title-class$">$title$</h1>
-    $endif$
-
-    <div class="$content-class$">
-
 $body$
-
-    <div>
-</div>
-
 
 $if(author)$
     <footer role="contentinfo" class="$footer-class$">
@@ -69,6 +62,8 @@ $if(author)$
 
     </footer>
 $endif$
+
+		</main>
 
 
 $for(include-after)$

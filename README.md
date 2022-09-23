@@ -1,10 +1,8 @@
----
-title: 'A dumb markdown website'
-css: 'https://maxcdn.bootstrapcdn.com/bootswatch/3.3.5/cerulean/bootstrap.min.css'
-content-class: 'well'
----
+*This fork is edited to work on MacOS 12.6, without touching SIP.  I did not actually run the install script; I did it manually, partly because a2enmod is not available on MacOS despite rumors that it's in homebrew.  Further notes are below and in the install script.  --mcd*
 
-*This fork is edited to work on MacOS 12.6, without touching SIP.  I did not actually run the install script; I did it manually, partly because a2enmod is not available on MacOS despite rumors that it's in homebrew.  Further notes are below and in the install script.  YMMV. --mcd*
+*This branch adds some customization to the template file.  I don't do YAML crap in my markdown files, but I wanted to reproduce the style of [SCMS](https://github.com/mcdemarco/scms).*
+
+----
 
 This is just a little hack I stumbled across to throw together a blindly simple set of nicely formatted HTML pages on a server quickly and easily.
 
@@ -16,7 +14,7 @@ Apache's [`mod_ext_filter`](https://httpd.apache.org/docs/2.2/mod/mod_ext_filter
 
  - Pandoc installed to `/usr/local/bin/pandoc`
  
-The location is not a very hard requirement; just change the path in the conf file if you need to.
+*The location is not a very hard requirement; just change the path in the conf file if you need to.*
 
 ## Soft requirements
 
@@ -35,7 +33,7 @@ Run `install.sh` (or read it and apply manually) and then pop the following into
 </IfModule>
 ```
 
-(Note that such an .htaccess file like this is available at the root of this project.)
+*(Note that such an .htaccess file like this is available at the root of this project.)*
 
 or alternatively, this (if you have no non-markdown files and don't want file-extensions):
 ```
